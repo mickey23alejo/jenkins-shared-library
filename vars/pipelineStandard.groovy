@@ -13,7 +13,7 @@ def call(body) {
             }
             stage("Test: Alejandro") {
                 steps {
-                    sh "Estimado señores ${config.nombre} son las"
+                    sh "Estimado señores echo ${config.nombre} son las"
                 }
             }
             stage('Sorbinos') {
