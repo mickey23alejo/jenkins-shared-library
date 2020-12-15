@@ -11,7 +11,7 @@ def call(body) {
                     sh "echo ${config.nombre}"
                 }
             }
-            stage("Test: Alejandro") {
+            stage('Test: Alejandro') {
                 steps {
                     sh "Estimado señores echo ${config.nombre} son las"
                 }
