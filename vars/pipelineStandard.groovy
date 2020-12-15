@@ -8,7 +8,7 @@ def call(body) {
         stages{
             stage('Build alejandro') {
                 steps {
-                    echo 'Buiding'
+                    echo 'Bienvenido ${config.name}'
                 }
             }
             stage('Test: Alejandro') {
