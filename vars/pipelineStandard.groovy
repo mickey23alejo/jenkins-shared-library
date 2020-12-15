@@ -4,7 +4,11 @@ def call(body) {
     body.delegate = config
     body()
     pipeline{
-        agent any
+        agent {
+            node {
+                label 'my-defined-label'
+            }
+        }
         stages{
             stage('Build alejandro') {
                 steps {
