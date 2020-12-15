@@ -9,10 +9,8 @@ def call(body) {
             stage('Build alejandro') {
                 steps {
                      script {
-                        def browsers = ['chrome', 'firefox']
-                        for (int i = 0; i < browsers.size(); ++i) {
-                            echo "probando el browser ${browsers[i]}."
-                        }
+                        cd "$WORKSPACE"
+                        pwd
                      }
                 }
             }
