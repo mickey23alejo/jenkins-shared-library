@@ -3,31 +3,24 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    def label_name = config.agent?: 'mvn3.6.0-jdk8'
+    def label_name = config.agent?: 'Sebastian'
     pipeline{
-        agent { 
-            label "${label_name}"
-        }
+        agent any
         stages{
-            stage('Build') {
+            stage('Build alejandro') {
                 steps {
-                    sh "mvn clean install -B -f ${config.pom}"
+                    sh "echo ${config.nombre}"
                 }
             }
-            stage("Test: SonarQube") {
+            stage("Test: Alejandro") {
                 steps {
-                    sh "mvn sonar:sonar -B -f ${config.pom}"
+                    sh "Estimado ${config.nombre} son las date"
                 }
             }
-            stage('Publish Artifactory') {
+            stage('Sorbinos') {
                 steps {
-                    publishArtifactory(".*.${config.artifact}")
+                    sh "echo ${config:nombre}
                 }
-            }
-        }
-        post{
-            always{
-                messageEmail("")
             }
         }
     }
