@@ -6,7 +6,7 @@ def call(body) {
     pipeline{
         agent {
             node {
-                label 'my-defined-label'
+                label 'first_slave'
             }
         }
         stages{
