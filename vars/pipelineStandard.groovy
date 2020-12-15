@@ -14,12 +14,12 @@ def call(body) {
             }
             stage("Test: Alejandro") {
                 steps {
-                    sh "Estimado ${config.nombre} son las date"
+                    sh "Estimado ${config.nombre} son las"
                 }
             }
             stage('Sorbinos') {
                 steps {
-                    sh "echo ${config:nombre}"
+                    sh "echo ${config.nombre}"
                 }
             }
         }
