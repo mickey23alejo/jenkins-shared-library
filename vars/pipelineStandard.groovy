@@ -19,7 +19,7 @@ def call(body) {
             }
             stage('Sorbinos') {
                 steps {
-                    sh "echo ${config:nombre}
+                    sh "echo ${config:nombre}"
                 }
             }
         }
