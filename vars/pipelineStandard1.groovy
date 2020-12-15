@@ -8,10 +8,7 @@ def call(body) {
         stages{
             stage('Build alejandro') {
                 steps {
-                     script {
-                        cd "$WORKSPACE"
-                        pwd
-                     }
+                    sh "cd {$WORKSPACE}"
                 }
             }
             stage('Test: Alejandro') {
