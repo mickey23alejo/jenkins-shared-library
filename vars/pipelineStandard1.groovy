@@ -13,7 +13,7 @@ def call(body) {
             }
             stage('Test: Alejandro') {
                 steps {
-                     echo 'Buiding alejandro'
+                     echo 'Bienvenido ${config.name}'
                 }
             }
             stage('Sorbinos') {
