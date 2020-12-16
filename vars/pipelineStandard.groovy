@@ -4,11 +4,7 @@ def call(body) {
     body.delegate = config
     body()
     pipeline{
-        agent {
-            node {
-                label 'first_slave'
-            }
-        }
+        agent any
         stages{
             stage('Build alejandro') {
                 steps {
