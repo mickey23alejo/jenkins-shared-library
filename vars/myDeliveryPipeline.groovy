@@ -10,7 +10,6 @@ def call(body) {
         stages {
           stage('Primer paso') {
             steps {
-                echo ${config.name}
                 sh '/usr/bin/docker build -f Dockerfile -t ${config.name}-image:v1.0.$BUILD_NUMBER .'
             }        
           }
