@@ -15,7 +15,7 @@ def call(body) {
                 cd $WORKSPACE
                 cd "/tmp/${config.name}"
                 '''*/
-                echo 'you choose ${config.name}'
+                sh "echo 'you choose ${config.name}'"
             }        
           }
           stage('Conexion ssh') {
