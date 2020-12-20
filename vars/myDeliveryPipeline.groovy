@@ -23,7 +23,7 @@ def call(body) {
           }
           stage('Push to Nexus'){
             steps{
-              sh "echo "$NEXUS_PASSWORD" | /usr/bin/docker login -u $NEXUS_USER --password-stdin 192.3.50.170:8082"
+              sh 'echo "$NEXUS_PASSWORD" | /usr/bin/docker login -u $NEXUS_USER --password-stdin 192.3.50.170:8082'
               /*echo "$NEXUS_PASSWORD"
               sh "/usr/bin/docker login -u $NEXUS_USER --password-stdin 192.3.50.170:8082"
               echo "$NEXUS_PASSWORD" 
