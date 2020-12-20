@@ -9,7 +9,7 @@ def call(body) {
         agent any
             stage('Primer paso') {
                 steps {
-                    echo 'Bienvenido ${config.name}'
+                    echo 'Bienvenido ${pipelineParams.name}'
                 }
             }
     }
