@@ -11,7 +11,7 @@ def call(body) {
           stage('Primer paso') {
             steps {
                 sh 'cd $WORKSPACE'
-                sh "/usr/bin/docker build -f Dockerfile -t '${config.name}-image:v1.0.$BUILD_NUMBER ."
+                sh "/usr/bin/docker build -f Dockerfile -t '${config.name}'-image:v1.0.$BUILD_NUMBER ."
                 //sh "mkdir '${config.name}'"
                 /*sh '''
                 cd $WORKSPACE
