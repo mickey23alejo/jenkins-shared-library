@@ -10,8 +10,8 @@ def call(body) {
         stages {
           stage('Primer paso') {
             steps {
-                        echo 'Bienvenido ${config.name}'
-                    }        
+                echo 'Bienvenido ${config.name}'
+            }        
           }      
         }    
     }
