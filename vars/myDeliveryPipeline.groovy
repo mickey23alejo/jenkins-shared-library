@@ -10,7 +10,7 @@ def call(body) {
         stages {
           stage('Primer paso') {
             steps {
-                        echo 'Bienvenido ${pipelineParams.name}'
+                        echo 'Bienvenido ${config.name}'
                     }        
           }      
         }    
