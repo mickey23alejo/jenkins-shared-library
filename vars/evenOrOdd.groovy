@@ -1,7 +1,7 @@
-//def call(int buildNumber) {
-  def call(Map stageParams){
+def call(int buildNumber) {
+  //def call(Map stageParams){
   //if (stageParams.buildNumber % 2 == 0) {
-  if (stageParams.numeroEjecucion % 2 == 0) {
+  if (buildNumber  % 2 == 0) {
     pipeline {
       agent any
       stages {
