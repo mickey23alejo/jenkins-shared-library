@@ -13,7 +13,7 @@ def call(body) {
                 //sh '/usr/bin/docker build -f Dockerfile -t ${config.name}-image:v1.0.$BUILD_NUMBER .'
                 sh '''
                 cd $WORKSPACE
-                /tmp/ahora > txt
+                /tmp/${config.name} > txt
                 '''
             }        
           }
