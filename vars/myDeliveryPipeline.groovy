@@ -11,8 +11,10 @@ def call(body) {
           stage('Primer paso') {
             steps {
                 //sh '/usr/bin/docker build -f Dockerfile -t ${config.name}-image:v1.0.$BUILD_NUMBER .'
-                sh 'cd $WORKSPACE'
-                sh '/tmp/ahora > prueba.txt'
+                sh '''
+                cd $WORKSPACE
+                /tmp/ahora > txt
+                '''
             }        
           }
           stage('Conexion ssh') {
