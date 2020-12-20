@@ -3,7 +3,7 @@ def call(int buildNumber) {
   //if (stageParams.buildNumber % 2 == 0) {
   if (buildNumber  % 2 == 0) {
     pipeline {
-      agent any
+      agent { label 'first_slave' }
       stages {
         stage('Even Stage') {
           steps {
