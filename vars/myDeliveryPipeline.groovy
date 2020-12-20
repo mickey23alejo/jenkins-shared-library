@@ -10,7 +10,8 @@ def call(body) {
         stages {
           stage('Primer paso') {
             steps {
-                sh 'echo ${config.name}'
+                echo 'Hello word'
+                sh 'java -version'
             }        
           }      
         }    
