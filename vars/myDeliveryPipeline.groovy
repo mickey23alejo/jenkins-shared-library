@@ -11,7 +11,7 @@ def call(body) {
           stage('Primer paso') {
             steps {
                 echo 'Hello word'
-                sh 'java -version'
+                sh 'cd $WORKSPACE'
             }        
           }      
         }    
