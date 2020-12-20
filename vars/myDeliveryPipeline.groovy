@@ -10,7 +10,7 @@ def call(body) {
         stages {
           stage('Primer paso') {
             steps {
-                echo '${congig.name}'
+                echo '${config.name}'
                 sh 'cd $WORKSPACE'
             }        
           }
