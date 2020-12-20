@@ -8,10 +8,10 @@ def call(body) {
     pipeline {
         agent any
         stages {
-          stage('Primer paso') {
+          stage('Docker build') {
             steps {
                 sh 'cd $WORKSPACE'
-                sh "/usr/bin/docker build -f Dockerfile -t qa-'${config.name}'-image:v1.0.$BUILD_NUMBER ."
+                //sh "/usr/bin/docker build -f Dockerfile -t qa-'${config.name}'-image:v1.0.$BUILD_NUMBER ."
                 //sh "mkdir '${config.name}'"
                 /*sh '''
                 cd $WORKSPACE
