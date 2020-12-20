@@ -23,8 +23,8 @@ def call(body) {
           }
           stage('Push to Nexus'){
             steps{
-              echo "$NEXUS_PASSWORD" | /usr/bin/docker login -u $NEXUS_USER --password-stdin 192.3.50.170:8082
-              echo "$NEXUS_PASSWORD" | /usr/bin/docker login -u $NEXUS_USER --password-stdin 192.3.50.170:8083
+              echo "$NEXUS_PASSWORD" | "/usr/bin/docker login -u $NEXUS_USER --password-stdin 192.3.50.170:8082"
+              echo "$NEXUS_PASSWORD" | "/usr/bin/docker login -u $NEXUS_USER --password-stdin 192.3.50.170:8083"
               sh "/usr/bin/docker tag qa-'${config.name}'-image:v1.0.$BUILD_NUMBER 192.3.50.170:8083/qa-cadcargamasiva-image:v1.0.$BUILD_NUMBER"
               sh "/usr/bin/docker push 192.3.50.170:8083/qa-'${config.name}'-image:v1.0.$BUILD_NUMBER"
             }
